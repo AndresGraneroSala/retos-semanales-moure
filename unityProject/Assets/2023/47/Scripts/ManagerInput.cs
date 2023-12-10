@@ -16,12 +16,19 @@ public class ManagerInput : MonoBehaviour
 
     [SerializeField] private GameObject prefab;
     [SerializeField] private Transform content;
-    
+
+    private void Start()
+    {
+        GoBackEdit();
+    }
+
     public void SubmitWord()
     {
 
         string word = input.text;
 
+        if(input.text==""){return;}
+        
         char[] letters = word.Replace(" ","").ToCharArray();
 
         int points = 0;
