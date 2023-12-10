@@ -46,17 +46,19 @@ public class ManagerInput : MonoBehaviour
 
     int GetPointsLetter(char letter)
     {
+        if (char.ToLower(letter) == 'ñ'){return numÑAlphabet;}
+
+        
         int points = 0;
 
         char letterClear = letter.ToString().Normalize(NormalizationForm.FormD).ToLower()[0];
-        
-        if (char.ToLower(letterClear) == 'ñ'){return numÑAlphabet;}
+        print(letter);
 
-        int letterPos32bit = Convert.ToInt32(char.ToLower(letter));
+        int letterPos32bit = Convert.ToInt32(char.ToLower(letterClear));
 
         bool isUpperÑ = letterPos32bit >= numA32bit + numÑAlphabet - 1;
 
-        points += char.ToLower(letter) - (numA32bit - 1);
+        points += letterPos32bit - (numA32bit - 1);
         points += isUpperÑ ? 1 : 0;
         return points;
     }
