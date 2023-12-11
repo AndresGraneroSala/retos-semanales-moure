@@ -63,6 +63,10 @@ public class ManagerInput : MonoBehaviour
 
         int letterPos32bit = Convert.ToInt32(char.ToLower(letterClear));
 
+        if (letterPos32bit<numA32bit|| letterPos32bit>numA32bit+26)
+        {/*no letter*/ return 0;}
+        
+        
         bool isUpperÑ = letterPos32bit >= numA32bit + numÑAlphabet - 1;
 
         points += letterPos32bit - (numA32bit - 1);
