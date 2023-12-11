@@ -10,6 +10,9 @@ public class Terminal : MonoBehaviour
     [SerializeField] private InputField input;
     [SerializeField] private int positionInHistoric=0;
 
+    public List<string> commands;
+    [SerializeField] private string originalText;
+    
     private void Start()
     {
         _historic = new List<string>();
@@ -43,7 +46,46 @@ public class Terminal : MonoBehaviour
             input.text = _historic[_historic.Count+1-positionInHistoric];
             positionInHistoric--;
         }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            bool isTextACommand=false;
+            
+            foreach (var command in commands)
+            {
+                if (command==input.text)
+                {
+                    isTextACommand = true;
+                }
+            }
+
+            if (!isTextACommand)
+            {
+                originalText = input.text;
+            }
+            
+            foreach (var command in commands)
+            {
+                if (command == input.text)
+                {
+                    continue;
+                }
+                
+                if (command.ToLower().Contains(originalText.ToLower()))
+                {
+                    input.text = command;
+                    input.caretPosition = command.Length;
+                    break;
+                }
+            }
+        }
         
+        
+    }
+    
+    public void GoBackEdit()
+    {
+        input.ActivateInputField();
     }
     
 }

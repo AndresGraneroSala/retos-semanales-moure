@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/2023/47/Palabra100P.unity
     guid: d16b0982df906de498ee5598caee0867
+  - enabled: 1
+    path: Assets/2023/46/LaCarreraDeCoches.unity
+    guid: 8cfc2292346b1774e8603dd6f7214bd6
   m_configObjects: {}
