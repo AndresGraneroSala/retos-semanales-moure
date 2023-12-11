@@ -24,6 +24,8 @@ public class ManagerInput : MonoBehaviour
 
     public void SubmitWord()
     {
+        if (string.IsNullOrEmpty( input.text)) {return;}
+        if (string.IsNullOrWhiteSpace( input.text)) {return;}
 
         string word = input.text;
 

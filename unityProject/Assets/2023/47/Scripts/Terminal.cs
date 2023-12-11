@@ -6,19 +6,22 @@ using UnityEngine.UI;
 
 public class Terminal : MonoBehaviour
 {
-    /*[SerializeField]*/ private List<string> historic;
+    /*[SerializeField]*/ private List<string> _historic;
     [SerializeField] private InputField input;
     [SerializeField] private int positionInHistoric=0;
 
     private void Start()
     {
-        historic = new List<string>();
+        _historic = new List<string>();
     }
 
     public void AddHistoric()
     {
+        if (string.IsNullOrEmpty( input.text)) {return;}
+        if (string.IsNullOrWhiteSpace( input.text)) {return;}       
+        
         positionInHistoric = 0;
-        historic.Add(input.text); 
+        _historic.Add(input.text); 
     }
 
     public void Update()
@@ -28,16 +31,16 @@ public class Terminal : MonoBehaviour
 
     void ChangeInputWithHistoric()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow)&& historic.Count != positionInHistoric)
+        if (Input.GetKeyDown(KeyCode.UpArrow)&& _historic.Count != positionInHistoric)
         {
-            input.text = historic[historic.Count-1-positionInHistoric];
+            input.text = _historic[_historic.Count-1-positionInHistoric];
             positionInHistoric++;
         }  
         
         if (Input.GetKeyDown(KeyCode.DownArrow)&& positionInHistoric>1)
         {
-            print(historic.Count+1-positionInHistoric);
-            input.text = historic[historic.Count+1-positionInHistoric];
+            print(_historic.Count+1-positionInHistoric);
+            input.text = _historic[_historic.Count+1-positionInHistoric];
             positionInHistoric--;
         }
         
