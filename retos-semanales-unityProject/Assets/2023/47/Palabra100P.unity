@@ -493,11 +493,11 @@ PrefabInstance:
     - target: {fileID: 1960736029126136190, guid: 5c723b250884112408da8442a07f4fb8, type: 3}
       propertyPath: m_OnSubmit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 546375244}
+      objectReference: {fileID: 377945538}
     - target: {fileID: 1960736029126136190, guid: 5c723b250884112408da8442a07f4fb8, type: 3}
       propertyPath: m_OnSubmit.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 377945538}
+      objectReference: {fileID: 546375244}
     - target: {fileID: 1960736029126136190, guid: 5c723b250884112408da8442a07f4fb8, type: 3}
       propertyPath: m_OnDidEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
@@ -512,11 +512,11 @@ PrefabInstance:
       objectReference: {fileID: 377945538}
     - target: {fileID: 1960736029126136190, guid: 5c723b250884112408da8442a07f4fb8, type: 3}
       propertyPath: m_OnSubmit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SubmitWord
+      value: AddHistoric
       objectReference: {fileID: 0}
     - target: {fileID: 1960736029126136190, guid: 5c723b250884112408da8442a07f4fb8, type: 3}
       propertyPath: m_OnSubmit.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: AddHistoric
+      value: SubmitWord
       objectReference: {fileID: 0}
     - target: {fileID: 1960736029126136190, guid: 5c723b250884112408da8442a07f4fb8, type: 3}
       propertyPath: m_OnDidEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -528,11 +528,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1960736029126136190, guid: 5c723b250884112408da8442a07f4fb8, type: 3}
       propertyPath: m_OnSubmit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ManagerInput, Assembly-CSharp
+      value: Terminal, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1960736029126136190, guid: 5c723b250884112408da8442a07f4fb8, type: 3}
       propertyPath: m_OnSubmit.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Terminal, Assembly-CSharp
+      value: ManagerInput, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1960736029126136190, guid: 5c723b250884112408da8442a07f4fb8, type: 3}
       propertyPath: m_OnDidEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -717,7 +717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2421747551913219927, guid: 7f6957d2835d8cb458e07827eae3d949, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 385.8333
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2421747551913219927, guid: 7f6957d2835d8cb458e07827eae3d949, type: 3}
       propertyPath: m_SizeDelta.y
@@ -835,6 +835,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7777223930246059504, guid: 7f6957d2835d8cb458e07827eae3d949, type: 3}
+      propertyPath: m_ChildControlHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8225542411671736420, guid: 7f6957d2835d8cb458e07827eae3d949, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -845,7 +849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8875227829266013101, guid: 7f6957d2835d8cb458e07827eae3d949, type: 3}
       propertyPath: m_HorizontalFit
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8901901834939462587, guid: 7f6957d2835d8cb458e07827eae3d949, type: 3}
       propertyPath: m_AnchorMax.x

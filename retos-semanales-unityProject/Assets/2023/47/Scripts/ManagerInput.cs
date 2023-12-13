@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Text;
-using System;
 using System.Globalization;
-using System.Text;
+
 public class ManagerInput : MonoBehaviour
 {
     [SerializeField] private InputField input;
@@ -61,7 +60,7 @@ public class ManagerInput : MonoBehaviour
         int points = 0;
 
         char letterClear = letter.ToString().Normalize(NormalizationForm.FormD).ToLower()[0];
-        print(letter);
+        //print(letter);
 
         int letterPos32bit = Convert.ToInt32(char.ToLower(letterClear));
 

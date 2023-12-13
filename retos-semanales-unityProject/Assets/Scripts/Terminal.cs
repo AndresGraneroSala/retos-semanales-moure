@@ -43,7 +43,7 @@ public class Terminal : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.DownArrow)&& positionInHistoric>1)
         {
-            print(_historic.Count+1-positionInHistoric);
+            //print(_historic.Count+1-positionInHistoric);
             input.text = _historic[_historic.Count+1-positionInHistoric];
             positionInHistoric--;
         }
